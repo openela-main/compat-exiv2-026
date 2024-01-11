@@ -1,0 +1,25 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 7034bb6..f091078 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -217,13 +217,13 @@ ADD_CUSTOM_TARGET(geotag-test COMMAND env EXIV2_BINDIR="${CMAKE_BINARY_DIR}"/bin
+ # effectively does a make doc on the root directory
+ # has to run 'make config' and './configure'
+ # and copy bin/taglist to <exiv2dir>/bin/taglist for use by 'make doc'
+-IF( MINGW OR UNIX OR APPLE)
+-  ADD_CUSTOM_TARGET(doc
+-    WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}/doc"
+-    COMMAND chmod +x ./cmake_doc.sh
+-    COMMAND ./cmake_doc.sh "${CMAKE_BINARY_DIR}"
+-  )
+-ENDIF()
++# IF( MINGW OR UNIX OR APPLE)
++#   ADD_CUSTOM_TARGET(doc
++#     WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}/doc"
++#     COMMAND chmod +x ./cmake_doc.sh
++#     COMMAND ./cmake_doc.sh "${CMAKE_BINARY_DIR}"
++#   )
++# ENDIF()
+
+ # That's all Folks!
+ ##
